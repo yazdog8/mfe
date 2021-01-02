@@ -13,10 +13,8 @@ const generateClassName = createGenerateClassName({
 });
 
 export default ({ history, onSignIn }) => {
-
-  console.log(onSignIn)
   return (
-    <div>
+    <>
       <StylesProvider generateClassName={generateClassName}>
         <Router history={history}>
           <Switch>
@@ -29,6 +27,6 @@ export default ({ history, onSignIn }) => {
           </Switch>
         </Router>
       </StylesProvider>
-    </div>
+    </>
   );
 };
